@@ -7,7 +7,6 @@ int main() {
 	cout << "[1] Прямоугольник\n";
 	cout << "[2] Квадрат\n";
 	cout << "[3] Линия\n";
-	cout << "[4] Треугольник\n";
 	cout << "[+] Выберите фигуру: ";
 
 	int figure;
@@ -158,50 +157,7 @@ int main() {
 			return 0;
 		}
 		return 0;
+
+		return 0;
 	}
-	else if (figure == 4) {
-		char tip;
-		int velik;
-		char textura;
-		system("cls");
-		cout << "[+] Введите длину сторон равнобедренного треугольника: ";
-		cin >> velik;
-		system("cls");
-		cout << "[+] Выберите тип равнобедренного треугольника: \n\n";
-		cout << "A: Пустой / B: Заполненный \n";
-		cin >> tip;
-		system("cls");
-		cout << "[+] Введите текстуру равнобедренного треугольника: ";
-		cin >> textura;
-		system("cls");
-		if (tip == 'A') {
-			for (int y = 0; y < velik; y++) {
-				for (int x = 0; x <= velik; x++) {
-					if (x == (velik / 2) + y || x == (velik / 2) - y || y == velik / 2) {
-						cout << textura << " ";
-					}
-					else {
-						cout << "  ";
-					}
-				}
-				cout << endl;
-			}
-		}
-		else if (tip == 'B') {
-			for (int y = 0; y < velik; y++) {
-				for (int x = 0; x <= velik; x++) {
-					if (x <= (velik / 2) + y && x >= (velik / 2) - y && y <= velik / 2) {
-						cout << textura << " ";	
-					}
-					else {
-						cout << "  ";
-					}
-					
-				}
-				cout << endl;
-			}
-		}
-		
-	}
-	return 0;
 }
